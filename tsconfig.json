@@ -14,9 +14,10 @@
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
     "paths": {
+      "~/*": ["./app/*"],
       "#*": ["./*"],
       "@/icon-name": [
-        "./app/components/ui/icons/name.d.ts",
+        "./app/components/atoms/Icon/icons/name.d.ts",
         "./types/icon-name.d.ts"
       ]
     },
