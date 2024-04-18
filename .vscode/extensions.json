@@ -6,6 +6,13 @@
     "prisma.prisma",
     "qwtel.sqlite-viewer",
     "yoavbls.pretty-ts-errors",
-    "github.vscode-github-actions"
+    "tomoki1207.pdf",
+    "oderwat.indent-rainbow",
+    "formulahendry.auto-rename-tag",
+    "github.vscode-github-actions",
+    "donjayamanne.githistory",
+    "eamodio.gitlens",
+    "PKief.material-icon-theme",
+    "Gruntfuggly.todo-tree"
   ]
 }
