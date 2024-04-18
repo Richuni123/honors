@@ -60,6 +60,7 @@
     "@remix-run/server-runtime": "2.8.1",
     "@sentry/profiling-node": "^7.107.0",
     "@sentry/remix": "^7.107.0",
+    "@tailwindcss/typography": "^0.5.12",
     "address": "^2.0.2",
     "bcryptjs": "^2.4.3",
     "better-sqlite3": "^9.4.3",

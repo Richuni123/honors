@@ -1,12 +1,13 @@
+import typographyPlugin from '@tailwindcss/typography'
 import { type Config } from 'tailwindcss'
 import animatePlugin from 'tailwindcss-animate'
 import radixPlugin from 'tailwindcss-radix'
-import { marketingPreset } from './app/routes/_marketing+/tailwind-preset'
 import { extendedTheme } from './app/utils/extended-theme.ts'
+import { customPreset } from './app/utils/tailwind-preset.ts'
 
 export default {
 	content: ['./app/**/*.{ts,tsx,jsx,js}'],
-	darkMode: 'class',
+	darkMode: 'selector',
 	theme: {
 		container: {
 			center: true,
@@ -17,6 +18,6 @@ export default {
 		},
 		extend: extendedTheme,
 	},
-	presets: [marketingPreset],
-	plugins: [animatePlugin, radixPlugin],
+	presets: [customPreset],
+	plugins: [animatePlugin, radixPlugin, typographyPlugin],
 } satisfies Config
