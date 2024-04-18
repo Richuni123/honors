@@ -15,7 +15,7 @@ import {
 } from '@remix-run/react'
 import { formatDistanceToNow } from 'date-fns'
 import { z } from 'zod'
-import { GeneralErrorBoundary } from '#app/components/error-boundary.tsx'
+import { GeneralErrorBoundary } from '#app/components/ErrorBoundary.js'
 import { floatingToolbarClassName } from '#app/components/floating-toolbar.tsx'
 import { ErrorList } from '#app/components/forms.tsx'
 import { Button } from '#app/components/ui/button.tsx'
