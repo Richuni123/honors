@@ -92,6 +92,8 @@
     "qrcode": "^1.5.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^5.1.0",
+    "react-share": "^5.1.0",
     "remix-auth": "^3.6.0",
     "remix-auth-form": "^1.4.0",
     "remix-auth-github": "^1.7.0",
@@ -153,6 +155,7 @@
     "tsx": "^4.7.1",
     "typescript": "^5.4.2",
     "vite": "^5.1.6",
+    "vite-tsconfig-paths": "^4.3.2",
     "vitest": "^1.4.0"
   },
   "engines": {
