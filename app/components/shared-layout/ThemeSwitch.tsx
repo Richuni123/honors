@@ -1,10 +1,9 @@
+import { getFormProps, useForm } from '@conform-to/react'
+import { useFetcher } from '@remix-run/react'
 import useOptimisticThemeMode from '~/hooks/useOptimisticThemeMode'
 import { action } from '~/root'
 import { Theme } from '~/utils/theme.server'
-import { useForm } from '@conform-to/react'
-import { useFetcher } from '@remix-run/react'
 import { Icon } from '../atoms/Icon'
-import { ErrorList } from '../forms'
 
 export default function ThemeSwitch({
 	userPreference,
@@ -15,11 +14,12 @@ export default function ThemeSwitch({
 
 	const [form] = useForm({
 		id: 'theme-switch',
-		lastSubmission: fetcher.data?.submission,
+		lastResult: fetcher.data?.result,
 	})
 
 	const optimisticMode = useOptimisticThemeMode()
 	const mode = optimisticMode ?? userPreference ?? 'system'
+
 	const nextMode =
 		mode === 'system' ? 'light' : mode === 'light' ? 'dark' : 'system'
 	const modeLabel = {
@@ -41,7 +41,7 @@ export default function ThemeSwitch({
 	}
 
 	return (
-		<fetcher.Form method="POST" {...form.props}>
+		<fetcher.Form method="POST" {...getFormProps(form)}>
 			<input type="hidden" name="theme" value={nextMode} />
 			<div className="flex gap-2">
 				<button
@@ -51,7 +51,6 @@ export default function ThemeSwitch({
 					{modeLabel[mode]}
 				</button>
 			</div>
-			<ErrorList errors={form.errors} id={form.errorId} />
 		</fetcher.Form>
 	)
 }

@@ -7,7 +7,7 @@ import { customPreset } from './app/utils/tailwind-preset.ts'
 
 export default {
 	content: ['./app/**/*.{ts,tsx,jsx,js}'],
-	darkMode: 'selector',
+	darkMode: 'class',
 	theme: {
 		container: {
 			center: true,

@@ -13,13 +13,15 @@ interface DocumentProps {
 	nonce: string
 	theme?: Theme
 	env?: Record<string, string>
+	allowIndexing?: boolean
 }
 
 export default function Document({
 	children,
 	nonce,
-	theme = 'dark',
+	theme = 'light',
 	env = {},
+	allowIndexing = true,
 }: DocumentProps) {
 	return (
 		<html lang="en" className={`${theme} h-full overflow-x-hidden`}>
@@ -28,9 +30,12 @@ export default function Document({
 				<Meta />
 				<meta charSet="utf-8" />
 				<meta name="viewport" content="width=device-width,initial-scale=1" />
+				{allowIndexing ? null : (
+					<meta name="robots" content="noindex, nofollow" />
+				)}
 				<Links />
 			</head>
-			<body className="bg-background text-foreground dark:bg-dark-background dark:text-dark-foreground">
+			<body className="bg-background text-foreground">
 				{children}
 				<script
 					nonce={nonce}
@@ -40,7 +45,6 @@ export default function Document({
 				/>
 				<ScrollRestoration nonce={nonce} />
 				<Scripts nonce={nonce} />
-				<LiveReload nonce={nonce} />
 			</body>
 		</html>
 	)
