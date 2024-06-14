@@ -5,7 +5,7 @@
 
 ## Getting started
 
-1. Rename the file `.env.example` to `.env`
+1. Duplicate the file `.env.example`, and rename the copy to `.env`
 2. Open a new terminal from the VS Code menu - `Terminal > New Terminal`
 3. In your new terminal, type the following and hit return:
 
