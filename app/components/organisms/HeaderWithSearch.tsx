@@ -16,9 +16,26 @@ export default function HeaderWithSearch() {
 					<img
 						src={logo}
 						alt="Shoot Your Best Score Logo"
-						className="h-10 w-auto"
+						className="h-24 w-auto"
 					/>
 				</Link>
+
+				<div className="flex flex-1 justify-center gap-8">
+					<Link
+						to="/news"
+						prefetch="intent"
+						className="text-sm font-semibold text-muted-foreground transition hover:text-foreground"
+					>
+						News
+					</Link>
+					<Link
+						to="/about-us"
+						prefetch="intent"
+						className="text-sm font-semibold text-muted-foreground transition hover:text-foreground"
+					>
+						About us
+					</Link>
+				</div>
 
 				{/* SEARCH BAR (desktop) */}
 				<div className="ml-auto hidden max-w-sm flex-1 sm:block">

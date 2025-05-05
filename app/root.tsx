@@ -6,7 +6,8 @@ import { useNonce } from '~/utils/nonce-provider.ts'
 import rootLinkElements from '~/utils/providers/rootLinkElements'
 import FooterMenuRight from './components/organisms/Footer/FooterMenuRight.tsx'
 import HeaderWithSearch from './components/organisms/HeaderWithSearch'
-import ParallaxBackground from './components/organisms/Hero/ParallaxBackground.tsx'
+
+import { Outlet } from '@remix-run/react' // Import Outlet
 
 export const links: LinksFunction = () => {
 	return rootLinkElements
@@ -23,12 +24,11 @@ export default function App() {
 				<div className="flex h-screen flex-col">
 					<HeaderWithSearch />
 
-					{/* ✅ Parallax Hero Section */}
-					<ParallaxBackground
-						title="Your Journey Begins!"
-						description="Welcome to Epic News, where the latest developments in tech are found."
-					/>
+					<main className="flex-1">
+						<Outlet /> {/* This is where your index.tsx will be rendered */}
+					</main>
 
+					{/* Footer */}
 					<FooterMenuRight />
 				</div>
 			</Document>
