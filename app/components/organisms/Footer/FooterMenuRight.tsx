@@ -2,6 +2,7 @@ import { Link, NavLink } from '@remix-run/react'
 import { Button } from '#app/components/atoms/Button'
 import SocialMediaButtons from '#app/components/molecules/SocialMediaButtons'
 import { type FooterProps } from './FooterBasic'
+import logo from '~/assets/png/logo.png'
 
 const FooterMenuRight = ({
 	companyName = 'Shoot Your Best Score',
@@ -11,7 +12,7 @@ const FooterMenuRight = ({
 		<footer className="dark:bg-dark-secondary bg-secondary lg:py-16">
 			<div className="dark:border-dark-muted-foreground/75 container items-center justify-between border-b border-muted-foreground/75 py-8 lg:flex">
 				<Link to="/" className="flex w-20 items-center justify-center lg:w-24">
-					<img src="/img/logo.png" alt={altText} className="h-10 w-auto" />
+					<img src={logo} alt={altText} className="h-10 w-auto" />
 				</Link>
 
 				<div className="lg:flex">

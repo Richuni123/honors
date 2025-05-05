@@ -1,4 +1,5 @@
 import { useMatches, Link } from '@remix-run/react'
+import logo from '~/assets/png/logo.png'
 import { SearchBar } from '../molecules/SearchBar'
 import LoginOrUserDropdown from './LoginOrUserDropdown'
 
@@ -13,7 +14,7 @@ export default function HeaderWithSearch() {
 				{/* LOGO */}
 				<Link to="/" className="flex items-center">
 					<img
-						src="/img/logo.png"
+						src={logo}
 						alt="Shoot Your Best Score Logo"
 						className="h-10 w-auto"
 					/>
