@@ -299,7 +299,7 @@ const AboutUs = () => {
 			</div>
 
 			{/* Google Map */}
-			<LoadScript googleMapsApiKey="YOUR_GOOGLE_MAPS_API_KEY">
+			<LoadScript googleMapsApiKey="AIzaSyAg_e7_3kvXwRw6vuMVqqBeZFk11D4b5Co">
 				<GoogleMap
 					mapContainerStyle={mapContainerStyle}
 					center={center}
